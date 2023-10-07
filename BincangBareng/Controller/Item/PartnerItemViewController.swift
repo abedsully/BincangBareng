@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class PartnerItemViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
