@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54CB1AFCB03DF2ECE61FF083 /* Pods_BincangBareng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BD62DB6E4AD348BFB86A8 /* Pods_BincangBareng.framework */; };
+		A004CB9B2AD2803C0008EE42 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */; };
+		A004CB9D2AD283A20008EE42 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004CB9C2AD283A20008EE42 /* OnboardingCollectionViewCell.swift */; };
 		A0094D862ACECEB2006F4C7C /* SubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D852ACECEB2006F4C7C /* SubcategoryTableViewController.swift */; };
 		A0094D892ACECFE8006F4C7C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0094D872ACECFE8006F4C7C /* DataModel.xcdatamodeld */; };
 		A0094D8B2ACED315006F4C7C /* FamilyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D8A2ACED315006F4C7C /* FamilyItemViewController.swift */; };
@@ -15,6 +18,7 @@
 		A056E63A2AD0268100BE8C63 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E6392AD0268100BE8C63 /* CategoryViewController.swift */; };
 		A056E63C2AD0295600BE8C63 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E63B2AD0295600BE8C63 /* CategoryCollectionViewCell.swift */; };
 		A056E63E2AD02D8600BE8C63 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E63D2AD02D8600BE8C63 /* Constant.swift */; };
+		A058E1C22AD1E664002809B1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058E1C12AD1E664002809B1 /* Extension.swift */; };
 		A08BC1912ACEC7BF001DD1C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC1902ACEC7BF001DD1C8 /* AppDelegate.swift */; };
 		A08BC1932ACEC7BF001DD1C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC1922ACEC7BF001DD1C8 /* SceneDelegate.swift */; };
 		A08BC1952ACEC7BF001DD1C8 /* PartnerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC1942ACEC7BF001DD1C8 /* PartnerItemViewController.swift */; };
@@ -24,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030BD62DB6E4AD348BFB86A8 /* Pods_BincangBareng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BincangBareng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D06520971D1D470EAD410C /* Pods-BincangBareng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BincangBareng.release.xcconfig"; path = "Target Support Files/Pods-BincangBareng/Pods-BincangBareng.release.xcconfig"; sourceTree = "<group>"; };
+		5702CACD377215307A9BD067 /* Pods-BincangBareng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BincangBareng.debug.xcconfig"; path = "Target Support Files/Pods-BincangBareng/Pods-BincangBareng.debug.xcconfig"; sourceTree = "<group>"; };
+		A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		A004CB9C2AD283A20008EE42 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		A0094D852ACECEB2006F4C7C /* SubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewController.swift; sourceTree = "<group>"; };
 		A0094D882ACECFE8006F4C7C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		A0094D8A2ACED315006F4C7C /* FamilyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyItemViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +41,7 @@
 		A056E6392AD0268100BE8C63 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A056E63B2AD0295600BE8C63 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A056E63D2AD02D8600BE8C63 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A058E1C12AD1E664002809B1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A08BC18D2ACEC7BF001DD1C8 /* BincangBareng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BincangBareng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08BC1902ACEC7BF001DD1C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08BC1922ACEC7BF001DD1C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +57,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CB1AFCB03DF2ECE61FF083 /* Pods_BincangBareng.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F864565AE5D38B72E335FF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5702CACD377215307A9BD067 /* Pods-BincangBareng.debug.xcconfig */,
+				21D06520971D1D470EAD410C /* Pods-BincangBareng.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4EA7C60F21093AE02DE85E91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				030BD62DB6E4AD348BFB86A8 /* Pods_BincangBareng.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0094D812ACEC843006F4C7C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +96,7 @@
 			children = (
 				A08BC1992ACEC7C0001DD1C8 /* Assets.xcassets */,
 				A056E63D2AD02D8600BE8C63 /* Constant.swift */,
+				A058E1C12AD1E664002809B1 /* Extension.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -86,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A0094D872ACECFE8006F4C7C /* DataModel.xcdatamodeld */,
+				A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				A0094D962ACF2BE8006F4C7C /* OnboardingViewController.swift */,
+				A004CB9C2AD283A20008EE42 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = "Onboarding View";
 			sourceTree = "<group>";
@@ -130,6 +162,8 @@
 			children = (
 				A08BC18F2ACEC7BF001DD1C8 /* BincangBareng */,
 				A08BC18E2ACEC7BF001DD1C8 /* Products */,
+				1F864565AE5D38B72E335FF9 /* Pods */,
+				4EA7C60F21093AE02DE85E91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A08BC1A12ACEC7C0001DD1C8 /* Build configuration list for PBXNativeTarget "BincangBareng" */;
 			buildPhases = (
+				9605B09957A5CD1AEA2273B5 /* [CP] Check Pods Manifest.lock */,
 				A08BC1892ACEC7BF001DD1C8 /* Sources */,
 				A08BC18A2ACEC7BF001DD1C8 /* Frameworks */,
 				A08BC18B2ACEC7BF001DD1C8 /* Resources */,
+				77360256B1608D2E6AB1BC52 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +257,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77360256B1608D2E6AB1BC52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BincangBareng/Pods-BincangBareng-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BincangBareng/Pods-BincangBareng-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BincangBareng/Pods-BincangBareng-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9605B09957A5CD1AEA2273B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BincangBareng-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A08BC1892ACEC7BF001DD1C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -229,10 +307,13 @@
 				A056E63A2AD0268100BE8C63 /* CategoryViewController.swift in Sources */,
 				A08BC1952ACEC7BF001DD1C8 /* PartnerItemViewController.swift in Sources */,
 				A0094D8B2ACED315006F4C7C /* FamilyItemViewController.swift in Sources */,
+				A058E1C22AD1E664002809B1 /* Extension.swift in Sources */,
 				A0094D892ACECFE8006F4C7C /* DataModel.xcdatamodeld in Sources */,
+				A004CB9D2AD283A20008EE42 /* OnboardingCollectionViewCell.swift in Sources */,
 				A08BC1912ACEC7BF001DD1C8 /* AppDelegate.swift in Sources */,
 				A0094D862ACECEB2006F4C7C /* SubcategoryTableViewController.swift in Sources */,
 				A056E63C2AD0295600BE8C63 /* CategoryCollectionViewCell.swift in Sources */,
+				A004CB9B2AD2803C0008EE42 /* OnboardingSlide.swift in Sources */,
 				A0094D972ACF2BE8006F4C7C /* OnboardingViewController.swift in Sources */,
 				A056E63E2AD02D8600BE8C63 /* Constant.swift in Sources */,
 				A08BC1932ACEC7BF001DD1C8 /* SceneDelegate.swift in Sources */,
@@ -378,6 +459,7 @@
 		};
 		A08BC1A22ACEC7C0001DD1C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5702CACD377215307A9BD067 /* Pods-BincangBareng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,6 +488,7 @@
 		};
 		A08BC1A32ACEC7C0001DD1C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D06520971D1D470EAD410C /* Pods-BincangBareng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

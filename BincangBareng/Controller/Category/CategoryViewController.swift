@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class CategoryViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var welcomeLabel: CLTypingLabel!
     
     var images: [String] =
     [
@@ -25,6 +28,8 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        welcomeLabel.text = "Who do you want to play with today?"
     }
     
 }
@@ -39,7 +44,7 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.collectionViewCell, for: indexPath) as! CategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.categoryCell, for: indexPath) as! CategoryCollectionViewCell
         
         cell.labelCategory.text = text[indexPath.row]
         cell.imageCategory.image = UIImage(named: images[indexPath.row])
@@ -50,6 +55,10 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = (collectionView.frame.size.width)
         return CGSize(width: size, height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
     
 }
