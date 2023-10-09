@@ -13,13 +13,16 @@ class PartnerSubcategoryTableViewController: UITableViewController {
     let realm = try! Realm()
     
     var subcategories: Results<Subcategory>?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addDefaultSubcategory(title: "Love", fileName: "lovePartner")
+        addDefaultSubcategory(title: "Work", fileName: "workPartner")
+        
         loadSubcategories()
     }
-
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,5 +97,34 @@ class PartnerSubcategoryTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-
+    
+    
+    // // MARK: - Default Topics and Questions
+    func addDefaultSubcategory(title: String, fileName: String) {
+        
+        if realm.objects(Subcategory.self).filter("title == %@", title).first != nil {
+            print("Subcategory with title '\(title)' already exists. Skipping...")
+            return
+        }
+        
+        let subcategory = Subcategory()
+        subcategory.title = title
+        
+        if let questions = loadQuestionsFromFile(fileName: fileName) {
+            for question in questions {
+                let newItem = Item()
+                newItem.name = question
+                newItem.done = false
+                subcategory.items.append(newItem)
+            }
+        } else {
+            print("Failed to load questions from file.")
+        }
+        
+        saveSubcategories(subcategories: subcategory)
+    }
+    
+    
+    
+    
 }

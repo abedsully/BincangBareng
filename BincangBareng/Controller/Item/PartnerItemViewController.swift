@@ -22,6 +22,8 @@ class PartnerItemViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = 70.0
+        
     }
     
     // MARK: - Table View Datasource Methods
@@ -36,6 +38,8 @@ class PartnerItemViewController: UITableViewController {
             cell.textLabel?.text = item.name
             
             cell.accessoryType = item.done ? .checkmark : .none
+            
+            cell.textLabel?.numberOfLines = 0 
         }
         
         else {
