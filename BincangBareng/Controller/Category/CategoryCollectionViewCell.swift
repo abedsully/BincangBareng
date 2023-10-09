@@ -13,5 +13,4 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelCategory: UILabel!
     
     
-    
 }

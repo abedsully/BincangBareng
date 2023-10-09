@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import CLTypingLabel
+
 
 class CategoryViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var welcomeLabel: CLTypingLabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var images: [String] =
     [
@@ -29,7 +28,7 @@ class CategoryViewController: UIViewController {
         
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
-        welcomeLabel.text = "Who do you want to play with today?"
+    
     }
     
 }
@@ -58,7 +57,22 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+        // To Partner Subcategory
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: Constant.toPartnerSubcategory, sender: self)
+        }
+        
+        // To Family Subcategory
+        else if indexPath.row == 1{
+            performSegue(withIdentifier: Constant.toFamilySubcategory, sender: self)
+        }
+        
+        // To Friends Subcategory
+        else if indexPath.row == 2 {
+            performSegue(withIdentifier: Constant.toFriendsSubcategory, sender: self)
+        }
+
     }
     
 }

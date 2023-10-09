@@ -10,11 +10,11 @@
 		54CB1AFCB03DF2ECE61FF083 /* Pods_BincangBareng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BD62DB6E4AD348BFB86A8 /* Pods_BincangBareng.framework */; };
 		A004CB9B2AD2803C0008EE42 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */; };
 		A004CB9D2AD283A20008EE42 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004CB9C2AD283A20008EE42 /* OnboardingCollectionViewCell.swift */; };
-		A0094D862ACECEB2006F4C7C /* SubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D852ACECEB2006F4C7C /* SubcategoryTableViewController.swift */; };
-		A0094D892ACECFE8006F4C7C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0094D872ACECFE8006F4C7C /* DataModel.xcdatamodeld */; };
 		A0094D8B2ACED315006F4C7C /* FamilyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D8A2ACED315006F4C7C /* FamilyItemViewController.swift */; };
 		A0094D8D2ACED342006F4C7C /* FriendsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D8C2ACED342006F4C7C /* FriendsItemViewController.swift */; };
 		A0094D972ACF2BE8006F4C7C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D962ACF2BE8006F4C7C /* OnboardingViewController.swift */; };
+		A01A7C162AD459AE001E1A54 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C152AD459AE001E1A54 /* Item.swift */; };
+		A01A7C182AD45ACC001E1A54 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C172AD45ACC001E1A54 /* Subcategory.swift */; };
 		A056E63A2AD0268100BE8C63 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E6392AD0268100BE8C63 /* CategoryViewController.swift */; };
 		A056E63C2AD0295600BE8C63 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E63B2AD0295600BE8C63 /* CategoryCollectionViewCell.swift */; };
 		A056E63E2AD02D8600BE8C63 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E63D2AD02D8600BE8C63 /* Constant.swift */; };
@@ -25,6 +25,7 @@
 		A08BC1982ACEC7BF001DD1C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08BC1962ACEC7BF001DD1C8 /* Main.storyboard */; };
 		A08BC19A2ACEC7C0001DD1C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A08BC1992ACEC7C0001DD1C8 /* Assets.xcassets */; };
 		A08BC19D2ACEC7C0001DD1C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08BC19B2ACEC7C0001DD1C8 /* LaunchScreen.storyboard */; };
+		A0A0FE772AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A0FE762AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +34,11 @@
 		5702CACD377215307A9BD067 /* Pods-BincangBareng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BincangBareng.debug.xcconfig"; path = "Target Support Files/Pods-BincangBareng/Pods-BincangBareng.debug.xcconfig"; sourceTree = "<group>"; };
 		A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		A004CB9C2AD283A20008EE42 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
-		A0094D852ACECEB2006F4C7C /* SubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewController.swift; sourceTree = "<group>"; };
-		A0094D882ACECFE8006F4C7C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		A0094D8A2ACED315006F4C7C /* FamilyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyItemViewController.swift; sourceTree = "<group>"; };
 		A0094D8C2ACED342006F4C7C /* FriendsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsItemViewController.swift; sourceTree = "<group>"; };
 		A0094D962ACF2BE8006F4C7C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A01A7C152AD459AE001E1A54 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A01A7C172AD45ACC001E1A54 /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
 		A056E6392AD0268100BE8C63 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A056E63B2AD0295600BE8C63 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A056E63D2AD02D8600BE8C63 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		A08BC1992ACEC7C0001DD1C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A08BC19C2ACEC7C0001DD1C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A08BC19E2ACEC7C0001DD1C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0A0FE762AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerSubcategoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,6 @@
 				5702CACD377215307A9BD067 /* Pods-BincangBareng.debug.xcconfig */,
 				21D06520971D1D470EAD410C /* Pods-BincangBareng.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -115,8 +116,9 @@
 		A0094D842ACEC86A006F4C7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A0094D872ACECFE8006F4C7C /* DataModel.xcdatamodeld */,
 				A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */,
+				A01A7C152AD459AE001E1A54 /* Item.swift */,
+				A01A7C172AD45ACC001E1A54 /* Subcategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,7 +136,7 @@
 		A0094D8F2ACED357006F4C7C /* Subcategory */ = {
 			isa = PBXGroup;
 			children = (
-				A0094D852ACECEB2006F4C7C /* SubcategoryTableViewController.swift */,
+				A0A0FE762AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift */,
 			);
 			path = Subcategory;
 			sourceTree = "<group>";
@@ -307,14 +309,15 @@
 				A056E63A2AD0268100BE8C63 /* CategoryViewController.swift in Sources */,
 				A08BC1952ACEC7BF001DD1C8 /* PartnerItemViewController.swift in Sources */,
 				A0094D8B2ACED315006F4C7C /* FamilyItemViewController.swift in Sources */,
+				A0A0FE772AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift in Sources */,
+				A01A7C162AD459AE001E1A54 /* Item.swift in Sources */,
 				A058E1C22AD1E664002809B1 /* Extension.swift in Sources */,
-				A0094D892ACECFE8006F4C7C /* DataModel.xcdatamodeld in Sources */,
 				A004CB9D2AD283A20008EE42 /* OnboardingCollectionViewCell.swift in Sources */,
 				A08BC1912ACEC7BF001DD1C8 /* AppDelegate.swift in Sources */,
-				A0094D862ACECEB2006F4C7C /* SubcategoryTableViewController.swift in Sources */,
 				A056E63C2AD0295600BE8C63 /* CategoryCollectionViewCell.swift in Sources */,
 				A004CB9B2AD2803C0008EE42 /* OnboardingSlide.swift in Sources */,
 				A0094D972ACF2BE8006F4C7C /* OnboardingViewController.swift in Sources */,
+				A01A7C182AD45ACC001E1A54 /* Subcategory.swift in Sources */,
 				A056E63E2AD02D8600BE8C63 /* Constant.swift in Sources */,
 				A08BC1932ACEC7BF001DD1C8 /* SceneDelegate.swift in Sources */,
 				A0094D8D2ACED342006F4C7C /* FriendsItemViewController.swift in Sources */,
@@ -537,19 +540,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A0094D872ACECFE8006F4C7C /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A0094D882ACECFE8006F4C7C /* DataModel.xcdatamodel */,
-			);
-			currentVersion = A0094D882ACECFE8006F4C7C /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A08BC1852ACEC7BF001DD1C8 /* Project object */;
 }
