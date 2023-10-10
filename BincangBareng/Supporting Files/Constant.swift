@@ -27,11 +27,15 @@ struct Constant {
     static let subcategoryFamilyCell = "subcategoryFamilyCell"
     static let subcategoryFriendsCell = "subcategoryFriendsCell"
     static let toPartnerItem = "toPartnerItem"
+    static let toFamilyItem = "toFamilyItem"
+    static let toFriendsItem = "toFriendsItem"
     static let alertSubcategory = "Enter new topics"
     static let alertActionSubcategory = "Save"
     
     // MARK: - Item
     static let partnerItemCell = "partnerItemCell"
+    static let familyItemCell = "familyItemCell"
+    static let friendsItemCell = "friendsItemCell"
     static let alertItem = "Enter new questions"
     static let alertActionItem = "Save"
     

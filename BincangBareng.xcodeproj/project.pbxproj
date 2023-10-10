@@ -13,15 +13,48 @@
 		A0094D8B2ACED315006F4C7C /* FamilyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D8A2ACED315006F4C7C /* FamilyItemViewController.swift */; };
 		A0094D8D2ACED342006F4C7C /* FriendsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D8C2ACED342006F4C7C /* FriendsItemViewController.swift */; };
 		A0094D972ACF2BE8006F4C7C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0094D962ACF2BE8006F4C7C /* OnboardingViewController.swift */; };
-		A01A7C162AD459AE001E1A54 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C152AD459AE001E1A54 /* Item.swift */; };
-		A01A7C182AD45ACC001E1A54 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C172AD45ACC001E1A54 /* Subcategory.swift */; };
+		A01A7C162AD459AE001E1A54 /* ItemPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C152AD459AE001E1A54 /* ItemPartner.swift */; };
+		A01A7C182AD45ACC001E1A54 /* SubcategoryPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C172AD45ACC001E1A54 /* SubcategoryPartner.swift */; };
 		A01A7C1F2AD4693C001E1A54 /* QuestionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A7C1E2AD4693C001E1A54 /* QuestionLoader.swift */; };
 		A01A7C212AD46A87001E1A54 /* lovePartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C202AD46A87001E1A54 /* lovePartner.json */; };
 		A01A7C272AD46E6F001E1A54 /* workPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C262AD46E6F001E1A54 /* workPartner.json */; };
+		A01A7C292AD47886001E1A54 /* travelPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C282AD47886001E1A54 /* travelPartner.json */; };
+		A01A7C2B2AD478AD001E1A54 /* hobbiesPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C2A2AD478AD001E1A54 /* hobbiesPartner.json */; };
+		A01A7C2D2AD478CF001E1A54 /* goalsPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C2C2AD478CF001E1A54 /* goalsPartner.json */; };
+		A01A7C2F2AD478EA001E1A54 /* memoriesPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C2E2AD478EA001E1A54 /* memoriesPartner.json */; };
+		A01A7C312AD4790D001E1A54 /* entertainmentPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C302AD4790D001E1A54 /* entertainmentPartner.json */; };
+		A01A7C332AD4792F001E1A54 /* foodPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C322AD4792F001E1A54 /* foodPartner.json */; };
+		A01A7C362AD4796E001E1A54 /* wellnessPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C342AD4796E001E1A54 /* wellnessPartner.json */; };
+		A01A7C372AD4796E001E1A54 /* eventsPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C352AD4796E001E1A54 /* eventsPartner.json */; };
+		A01A7C392AD47987001E1A54 /* futurePartner.json in Resources */ = {isa = PBXBuildFile; fileRef = A01A7C382AD47987001E1A54 /* futurePartner.json */; };
+		A01EF86E2AD54A2E00F470CC /* PersonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EF86D2AD54A2E00F470CC /* PersonType.swift */; };
+		A01EF8722AD55A6300F470CC /* ItemFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EF8712AD55A6300F470CC /* ItemFamily.swift */; };
+		A01EF8742AD55A7E00F470CC /* SubcategoryFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EF8732AD55A7E00F470CC /* SubcategoryFamily.swift */; };
+		A01EF8762AD55A9D00F470CC /* ItemFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EF8752AD55A9D00F470CC /* ItemFriends.swift */; };
+		A01EF87A2AD55AB600F470CC /* SubcategoryFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EF8792AD55AB600F470CC /* SubcategoryFriends.swift */; };
+		A01EF87C2AD55BE900F470CC /* FriendsSubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EF87B2AD55BE900F470CC /* FriendsSubcategoryTableViewController.swift */; };
+		A01EF8852AD5632100F470CC /* childhoodFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF87E2AD5632100F470CC /* childhoodFamily.json */; };
+		A01EF8862AD5632100F470CC /* experienceFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF87F2AD5632100F470CC /* experienceFamily.json */; };
+		A01EF8872AD5632100F470CC /* hobbiesFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8802AD5632100F470CC /* hobbiesFamily.json */; };
+		A01EF8882AD5632100F470CC /* dreamsFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8812AD5632100F470CC /* dreamsFamily.json */; };
+		A01EF8892AD5632100F470CC /* travelFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8822AD5632100F470CC /* travelFamily.json */; };
+		A01EF88A2AD5632100F470CC /* traditionsFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8832AD5632100F470CC /* traditionsFamily.json */; };
+		A01EF88B2AD5632100F470CC /* growthFamily.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8842AD5632100F470CC /* growthFamily.json */; };
+		A01EF8962AD564CC00F470CC /* goalsFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF88C2AD564CB00F470CC /* goalsFriends.json */; };
+		A01EF8972AD564CC00F470CC /* hobbiesFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF88D2AD564CB00F470CC /* hobbiesFriends.json */; };
+		A01EF8982AD564CC00F470CC /* booksFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF88E2AD564CB00F470CC /* booksFriends.json */; };
+		A01EF8992AD564CC00F470CC /* growthFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF88F2AD564CB00F470CC /* growthFriends.json */; };
+		A01EF89A2AD564CC00F470CC /* foodFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8902AD564CB00F470CC /* foodFriends.json */; };
+		A01EF89B2AD564CC00F470CC /* musicFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8912AD564CB00F470CC /* musicFriends.json */; };
+		A01EF89C2AD564CC00F470CC /* travelFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8922AD564CB00F470CC /* travelFriends.json */; };
+		A01EF89D2AD564CC00F470CC /* moviesFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8932AD564CB00F470CC /* moviesFriends.json */; };
+		A01EF89E2AD564CC00F470CC /* eventsFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8942AD564CB00F470CC /* eventsFriends.json */; };
+		A01EF89F2AD564CC00F470CC /* funnyStoriesFriends.json in Resources */ = {isa = PBXBuildFile; fileRef = A01EF8952AD564CB00F470CC /* funnyStoriesFriends.json */; };
 		A056E63A2AD0268100BE8C63 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E6392AD0268100BE8C63 /* CategoryViewController.swift */; };
 		A056E63C2AD0295600BE8C63 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E63B2AD0295600BE8C63 /* CategoryCollectionViewCell.swift */; };
 		A056E63E2AD02D8600BE8C63 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A056E63D2AD02D8600BE8C63 /* Constant.swift */; };
 		A058E1C22AD1E664002809B1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058E1C12AD1E664002809B1 /* Extension.swift */; };
+		A06502B62AD50B5A00667407 /* FamilySubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06502B52AD50B5A00667407 /* FamilySubcategoryTableViewController.swift */; };
 		A08BC1912ACEC7BF001DD1C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC1902ACEC7BF001DD1C8 /* AppDelegate.swift */; };
 		A08BC1932ACEC7BF001DD1C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC1922ACEC7BF001DD1C8 /* SceneDelegate.swift */; };
 		A08BC1952ACEC7BF001DD1C8 /* PartnerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC1942ACEC7BF001DD1C8 /* PartnerItemViewController.swift */; };
@@ -40,15 +73,48 @@
 		A0094D8A2ACED315006F4C7C /* FamilyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyItemViewController.swift; sourceTree = "<group>"; };
 		A0094D8C2ACED342006F4C7C /* FriendsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsItemViewController.swift; sourceTree = "<group>"; };
 		A0094D962ACF2BE8006F4C7C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A01A7C152AD459AE001E1A54 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A01A7C172AD45ACC001E1A54 /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
+		A01A7C152AD459AE001E1A54 /* ItemPartner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPartner.swift; sourceTree = "<group>"; };
+		A01A7C172AD45ACC001E1A54 /* SubcategoryPartner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryPartner.swift; sourceTree = "<group>"; };
 		A01A7C1E2AD4693C001E1A54 /* QuestionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLoader.swift; sourceTree = "<group>"; };
 		A01A7C202AD46A87001E1A54 /* lovePartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lovePartner.json; sourceTree = "<group>"; };
 		A01A7C262AD46E6F001E1A54 /* workPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = workPartner.json; sourceTree = "<group>"; };
+		A01A7C282AD47886001E1A54 /* travelPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = travelPartner.json; sourceTree = "<group>"; };
+		A01A7C2A2AD478AD001E1A54 /* hobbiesPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hobbiesPartner.json; sourceTree = "<group>"; };
+		A01A7C2C2AD478CF001E1A54 /* goalsPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goalsPartner.json; sourceTree = "<group>"; };
+		A01A7C2E2AD478EA001E1A54 /* memoriesPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = memoriesPartner.json; sourceTree = "<group>"; };
+		A01A7C302AD4790D001E1A54 /* entertainmentPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = entertainmentPartner.json; sourceTree = "<group>"; };
+		A01A7C322AD4792F001E1A54 /* foodPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foodPartner.json; sourceTree = "<group>"; };
+		A01A7C342AD4796E001E1A54 /* wellnessPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wellnessPartner.json; sourceTree = "<group>"; };
+		A01A7C352AD4796E001E1A54 /* eventsPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eventsPartner.json; sourceTree = "<group>"; };
+		A01A7C382AD47987001E1A54 /* futurePartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = futurePartner.json; sourceTree = "<group>"; };
+		A01EF86D2AD54A2E00F470CC /* PersonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonType.swift; sourceTree = "<group>"; };
+		A01EF8712AD55A6300F470CC /* ItemFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFamily.swift; sourceTree = "<group>"; };
+		A01EF8732AD55A7E00F470CC /* SubcategoryFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryFamily.swift; sourceTree = "<group>"; };
+		A01EF8752AD55A9D00F470CC /* ItemFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFriends.swift; sourceTree = "<group>"; };
+		A01EF8792AD55AB600F470CC /* SubcategoryFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryFriends.swift; sourceTree = "<group>"; };
+		A01EF87B2AD55BE900F470CC /* FriendsSubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSubcategoryTableViewController.swift; sourceTree = "<group>"; };
+		A01EF87E2AD5632100F470CC /* childhoodFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = childhoodFamily.json; sourceTree = "<group>"; };
+		A01EF87F2AD5632100F470CC /* experienceFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = experienceFamily.json; sourceTree = "<group>"; };
+		A01EF8802AD5632100F470CC /* hobbiesFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hobbiesFamily.json; sourceTree = "<group>"; };
+		A01EF8812AD5632100F470CC /* dreamsFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dreamsFamily.json; sourceTree = "<group>"; };
+		A01EF8822AD5632100F470CC /* travelFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = travelFamily.json; sourceTree = "<group>"; };
+		A01EF8832AD5632100F470CC /* traditionsFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = traditionsFamily.json; sourceTree = "<group>"; };
+		A01EF8842AD5632100F470CC /* growthFamily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growthFamily.json; sourceTree = "<group>"; };
+		A01EF88C2AD564CB00F470CC /* goalsFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goalsFriends.json; sourceTree = "<group>"; };
+		A01EF88D2AD564CB00F470CC /* hobbiesFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hobbiesFriends.json; sourceTree = "<group>"; };
+		A01EF88E2AD564CB00F470CC /* booksFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = booksFriends.json; sourceTree = "<group>"; };
+		A01EF88F2AD564CB00F470CC /* growthFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growthFriends.json; sourceTree = "<group>"; };
+		A01EF8902AD564CB00F470CC /* foodFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foodFriends.json; sourceTree = "<group>"; };
+		A01EF8912AD564CB00F470CC /* musicFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = musicFriends.json; sourceTree = "<group>"; };
+		A01EF8922AD564CB00F470CC /* travelFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = travelFriends.json; sourceTree = "<group>"; };
+		A01EF8932AD564CB00F470CC /* moviesFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moviesFriends.json; sourceTree = "<group>"; };
+		A01EF8942AD564CB00F470CC /* eventsFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eventsFriends.json; sourceTree = "<group>"; };
+		A01EF8952AD564CB00F470CC /* funnyStoriesFriends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = funnyStoriesFriends.json; sourceTree = "<group>"; };
 		A056E6392AD0268100BE8C63 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A056E63B2AD0295600BE8C63 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A056E63D2AD02D8600BE8C63 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A058E1C12AD1E664002809B1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A06502B52AD50B5A00667407 /* FamilySubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySubcategoryTableViewController.swift; sourceTree = "<group>"; };
 		A08BC18D2ACEC7BF001DD1C8 /* BincangBareng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BincangBareng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08BC1902ACEC7BF001DD1C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08BC1922ACEC7BF001DD1C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +172,7 @@
 				A056E63D2AD02D8600BE8C63 /* Constant.swift */,
 				A058E1C12AD1E664002809B1 /* Extension.swift */,
 				A01A7C1E2AD4693C001E1A54 /* QuestionLoader.swift */,
+				A01EF86D2AD54A2E00F470CC /* PersonType.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -124,9 +191,9 @@
 		A0094D842ACEC86A006F4C7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A01EF8702AD55A5400F470CC /* Items */,
+				A01EF86F2AD55A4C00F470CC /* Subcategory */,
 				A004CB9A2AD2803C0008EE42 /* OnboardingSlide.swift */,
-				A01A7C152AD459AE001E1A54 /* Item.swift */,
-				A01A7C172AD45ACC001E1A54 /* Subcategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				A0A0FE762AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift */,
+				A06502B52AD50B5A00667407 /* FamilySubcategoryTableViewController.swift */,
+				A01EF87B2AD55BE900F470CC /* FriendsSubcategoryTableViewController.swift */,
 			);
 			path = Subcategory;
 			sourceTree = "<group>";
@@ -170,6 +239,8 @@
 		A01A7C192AD467EC001E1A54 /* Questions Lists */ = {
 			isa = PBXGroup;
 			children = (
+				A01EF87D2AD55EF500F470CC /* FriendsCategory */,
+				A06502B42AD50AF100667407 /* FamilyCategory */,
 				A01A7C1A2AD4685C001E1A54 /* PartnerCategory */,
 			);
 			name = "Questions Lists";
@@ -178,10 +249,70 @@
 		A01A7C1A2AD4685C001E1A54 /* PartnerCategory */ = {
 			isa = PBXGroup;
 			children = (
+				A01A7C382AD47987001E1A54 /* futurePartner.json */,
+				A01A7C352AD4796E001E1A54 /* eventsPartner.json */,
+				A01A7C342AD4796E001E1A54 /* wellnessPartner.json */,
+				A01A7C322AD4792F001E1A54 /* foodPartner.json */,
+				A01A7C302AD4790D001E1A54 /* entertainmentPartner.json */,
+				A01A7C2E2AD478EA001E1A54 /* memoriesPartner.json */,
+				A01A7C2C2AD478CF001E1A54 /* goalsPartner.json */,
+				A01A7C2A2AD478AD001E1A54 /* hobbiesPartner.json */,
+				A01A7C282AD47886001E1A54 /* travelPartner.json */,
 				A01A7C262AD46E6F001E1A54 /* workPartner.json */,
 				A01A7C202AD46A87001E1A54 /* lovePartner.json */,
 			);
 			path = PartnerCategory;
+			sourceTree = "<group>";
+		};
+		A01EF86F2AD55A4C00F470CC /* Subcategory */ = {
+			isa = PBXGroup;
+			children = (
+				A01A7C172AD45ACC001E1A54 /* SubcategoryPartner.swift */,
+				A01EF8732AD55A7E00F470CC /* SubcategoryFamily.swift */,
+				A01EF8792AD55AB600F470CC /* SubcategoryFriends.swift */,
+			);
+			path = Subcategory;
+			sourceTree = "<group>";
+		};
+		A01EF8702AD55A5400F470CC /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				A01A7C152AD459AE001E1A54 /* ItemPartner.swift */,
+				A01EF8712AD55A6300F470CC /* ItemFamily.swift */,
+				A01EF8752AD55A9D00F470CC /* ItemFriends.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		A01EF87D2AD55EF500F470CC /* FriendsCategory */ = {
+			isa = PBXGroup;
+			children = (
+				A01EF88E2AD564CB00F470CC /* booksFriends.json */,
+				A01EF8942AD564CB00F470CC /* eventsFriends.json */,
+				A01EF8902AD564CB00F470CC /* foodFriends.json */,
+				A01EF8952AD564CB00F470CC /* funnyStoriesFriends.json */,
+				A01EF88C2AD564CB00F470CC /* goalsFriends.json */,
+				A01EF88F2AD564CB00F470CC /* growthFriends.json */,
+				A01EF88D2AD564CB00F470CC /* hobbiesFriends.json */,
+				A01EF8932AD564CB00F470CC /* moviesFriends.json */,
+				A01EF8912AD564CB00F470CC /* musicFriends.json */,
+				A01EF8922AD564CB00F470CC /* travelFriends.json */,
+			);
+			path = FriendsCategory;
+			sourceTree = "<group>";
+		};
+		A06502B42AD50AF100667407 /* FamilyCategory */ = {
+			isa = PBXGroup;
+			children = (
+				A01EF87E2AD5632100F470CC /* childhoodFamily.json */,
+				A01EF8812AD5632100F470CC /* dreamsFamily.json */,
+				A01EF87F2AD5632100F470CC /* experienceFamily.json */,
+				A01EF8842AD5632100F470CC /* growthFamily.json */,
+				A01EF8802AD5632100F470CC /* hobbiesFamily.json */,
+				A01EF8832AD5632100F470CC /* traditionsFamily.json */,
+				A01EF8822AD5632100F470CC /* travelFamily.json */,
+			);
+			path = FamilyCategory;
 			sourceTree = "<group>";
 		};
 		A08BC1842ACEC7BF001DD1C8 = {
@@ -276,11 +407,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01EF8962AD564CC00F470CC /* goalsFriends.json in Resources */,
+				A01A7C2F2AD478EA001E1A54 /* memoriesPartner.json in Resources */,
+				A01EF8882AD5632100F470CC /* dreamsFamily.json in Resources */,
 				A08BC19D2ACEC7C0001DD1C8 /* LaunchScreen.storyboard in Resources */,
+				A01A7C312AD4790D001E1A54 /* entertainmentPartner.json in Resources */,
 				A08BC19A2ACEC7C0001DD1C8 /* Assets.xcassets in Resources */,
+				A01EF89D2AD564CC00F470CC /* moviesFriends.json in Resources */,
+				A01EF8992AD564CC00F470CC /* growthFriends.json in Resources */,
+				A01A7C372AD4796E001E1A54 /* eventsPartner.json in Resources */,
+				A01A7C292AD47886001E1A54 /* travelPartner.json in Resources */,
+				A01A7C362AD4796E001E1A54 /* wellnessPartner.json in Resources */,
+				A01EF8862AD5632100F470CC /* experienceFamily.json in Resources */,
+				A01EF8982AD564CC00F470CC /* booksFriends.json in Resources */,
+				A01EF8852AD5632100F470CC /* childhoodFamily.json in Resources */,
+				A01EF89E2AD564CC00F470CC /* eventsFriends.json in Resources */,
+				A01EF89A2AD564CC00F470CC /* foodFriends.json in Resources */,
+				A01A7C2D2AD478CF001E1A54 /* goalsPartner.json in Resources */,
 				A01A7C272AD46E6F001E1A54 /* workPartner.json in Resources */,
+				A01EF8972AD564CC00F470CC /* hobbiesFriends.json in Resources */,
+				A01EF88B2AD5632100F470CC /* growthFamily.json in Resources */,
+				A01EF8892AD5632100F470CC /* travelFamily.json in Resources */,
+				A01A7C332AD4792F001E1A54 /* foodPartner.json in Resources */,
+				A01A7C2B2AD478AD001E1A54 /* hobbiesPartner.json in Resources */,
+				A01EF8872AD5632100F470CC /* hobbiesFamily.json in Resources */,
+				A01EF88A2AD5632100F470CC /* traditionsFamily.json in Resources */,
 				A01A7C212AD46A87001E1A54 /* lovePartner.json in Resources */,
+				A01EF89B2AD564CC00F470CC /* musicFriends.json in Resources */,
 				A08BC1982ACEC7BF001DD1C8 /* Main.storyboard in Resources */,
+				A01A7C392AD47987001E1A54 /* futurePartner.json in Resources */,
+				A01EF89C2AD564CC00F470CC /* travelFriends.json in Resources */,
+				A01EF89F2AD564CC00F470CC /* funnyStoriesFriends.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,21 +490,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01EF8742AD55A7E00F470CC /* SubcategoryFamily.swift in Sources */,
+				A01EF8762AD55A9D00F470CC /* ItemFriends.swift in Sources */,
 				A056E63A2AD0268100BE8C63 /* CategoryViewController.swift in Sources */,
 				A08BC1952ACEC7BF001DD1C8 /* PartnerItemViewController.swift in Sources */,
 				A0094D8B2ACED315006F4C7C /* FamilyItemViewController.swift in Sources */,
 				A0A0FE772AD3D543007B4400 /* PartnerSubcategoryTableViewController.swift in Sources */,
-				A01A7C162AD459AE001E1A54 /* Item.swift in Sources */,
+				A01EF86E2AD54A2E00F470CC /* PersonType.swift in Sources */,
+				A01A7C162AD459AE001E1A54 /* ItemPartner.swift in Sources */,
 				A058E1C22AD1E664002809B1 /* Extension.swift in Sources */,
 				A004CB9D2AD283A20008EE42 /* OnboardingCollectionViewCell.swift in Sources */,
 				A08BC1912ACEC7BF001DD1C8 /* AppDelegate.swift in Sources */,
 				A056E63C2AD0295600BE8C63 /* CategoryCollectionViewCell.swift in Sources */,
+				A06502B62AD50B5A00667407 /* FamilySubcategoryTableViewController.swift in Sources */,
 				A004CB9B2AD2803C0008EE42 /* OnboardingSlide.swift in Sources */,
+				A01EF8722AD55A6300F470CC /* ItemFamily.swift in Sources */,
 				A0094D972ACF2BE8006F4C7C /* OnboardingViewController.swift in Sources */,
-				A01A7C182AD45ACC001E1A54 /* Subcategory.swift in Sources */,
+				A01A7C182AD45ACC001E1A54 /* SubcategoryPartner.swift in Sources */,
 				A056E63E2AD02D8600BE8C63 /* Constant.swift in Sources */,
 				A08BC1932ACEC7BF001DD1C8 /* SceneDelegate.swift in Sources */,
 				A0094D8D2ACED342006F4C7C /* FriendsItemViewController.swift in Sources */,
+				A01EF87A2AD55AB600F470CC /* SubcategoryFriends.swift in Sources */,
+				A01EF87C2AD55BE900F470CC /* FriendsSubcategoryTableViewController.swift in Sources */,
 				A01A7C1F2AD4693C001E1A54 /* QuestionLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

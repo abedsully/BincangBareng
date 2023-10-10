@@ -1,64 +1,61 @@
 //
-//  PartnerSubcategoryTableViewController.swift
+//  FamilySubcategoryTableViewController.swift
 //  BincangBareng
 //
-//  Created by Stefanus Albert Wilson on 10/9/23.
+//  Created by Stefanus Albert Wilson on 10/10/23.
 //
 
 import UIKit
 import RealmSwift
 
-class PartnerSubcategoryTableViewController: UITableViewController {
+class FamilySubcategoryTableViewController: UITableViewController {
     
     let realm = try! Realm()
     
-    var subcategories: Results<SubcategoryPartner>?
+    var subcategories: Results<SubcategoryFamily>?
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addTopicsPartner()
+            
+        addTopicsFamily()
         
         loadSubcategories()
     }
     
-    func addTopicsPartner(){
-        addDefaultSubcategory(title: "Love", fileName: "lovePartner")
-        addDefaultSubcategory(title: "Work", fileName: "workPartner")
-        addDefaultSubcategory(title: "Travel", fileName: "travelPartner")
-        addDefaultSubcategory(title: "Hobbies", fileName: "hobbiesPartner")
-        addDefaultSubcategory(title: "Goals", fileName: "goalsPartner")
-        addDefaultSubcategory(title: "Memories", fileName: "memoriesPartner")
-        addDefaultSubcategory(title: "Entertainment", fileName: "entertainmentPartner")
-        addDefaultSubcategory(title: "Foods", fileName: "foodPartner")
-        addDefaultSubcategory(title: "Wellness", fileName: "wellnessPartner")
-        addDefaultSubcategory(title: "Events", fileName: "eventsPartner")
-        addDefaultSubcategory(title: "Future", fileName: "futurePartner")
+    func addTopicsFamily(){
+        addDefaultSubcategory(title: "Childhood", fileName: "childhoodFamily")
+        addDefaultSubcategory(title: "Dreams", fileName: "dreamsFamily")
+        addDefaultSubcategory(title: "Experience", fileName: "experienceFamily")
+        addDefaultSubcategory(title: "Growth", fileName: "growthFamily")
+        addDefaultSubcategory(title: "Hobbies", fileName: "hobbiesFamily")
+        addDefaultSubcategory(title: "Traditions", fileName: "traditionsFamily")
+        addDefaultSubcategory(title: "Travelling", fileName: "travelFamily")
     }
     
-    // MARK: - Table View Data Source
     
+    
+    // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subcategories?.count ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.subcategoryPartnerCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.subcategoryFamilyCell, for: indexPath)
         
         cell.textLabel?.text = subcategories?[indexPath.row].title ?? "No topics added yet"
-    
+        
         return cell
     }
     
     // MARK: - Table View Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Constant.toPartnerItem, sender: self)
+        performSegue(withIdentifier: Constant.toFamilyItem, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! PartnerItemViewController
+        let destinationVC = segue.destination as! FamilyItemViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedSubcategory = subcategories?[indexPath.row]
@@ -67,36 +64,31 @@ class PartnerSubcategoryTableViewController: UITableViewController {
     
     // MARK: - Data Manipulation Methods
     
-    func saveSubcategories(subcategories: SubcategoryPartner) {
+    func saveSubcategories(subcategories: SubcategoryFamily) {
         do {
             try realm.write {
                 realm.add(subcategories)
             }
+        } catch {
+            print("Error saving new topics \(error)")
         }
-        
-        catch {
-            print("Error new topics \(error)")
-        }
-        
         tableView.reloadData()
     }
     
     func loadSubcategories(){
-        subcategories = realm.objects(SubcategoryPartner.self)
+        subcategories = realm.objects(SubcategoryFamily.self)
         
         tableView.reloadData()
     }
     
-    
     // MARK: - Adding New Topics
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
         var textField = UITextField()
         
         let alert = UIAlertController(title: Constant.alertSubcategory, message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: Constant.alertActionSubcategory, style: .default) { (action) in
-            let newSubcategory = SubcategoryPartner()
+            let newSubcategory = SubcategoryFamily()
             
             newSubcategory.title = textField.text!
             
@@ -104,8 +96,6 @@ class PartnerSubcategoryTableViewController: UITableViewController {
         }
         
         alert.addAction(action)
-        
-        
         alert.addTextField { (alertTextField) in
             textField = alertTextField
         }
@@ -125,18 +115,18 @@ class PartnerSubcategoryTableViewController: UITableViewController {
     // // MARK: - Default Topics and Questions
     func addDefaultSubcategory(title: String, fileName: String) {
         
-        if realm.objects(SubcategoryPartner.self).filter("title == %@", title).first != nil {
+        if realm.objects(SubcategoryFamily.self).filter("title == %@", title).first != nil {
             print("Subcategory with title '\(title)' already exists. Skipping...")
             return
         }
         
-        let subcategory = SubcategoryPartner()
+        let subcategory = SubcategoryFamily()
         subcategory.title = title
         
         
         if let questions = loadQuestionsFromFile(fileName: fileName) {
             for question in questions {
-                let newItem = ItemPartner()
+                let newItem = ItemFamily()
                 newItem.name = question
                 newItem.done = false
                 subcategory.items.append(newItem)
@@ -147,8 +137,5 @@ class PartnerSubcategoryTableViewController: UITableViewController {
         
         saveSubcategories(subcategories: subcategory)
     }
-    
-    
-    
-    
+      
 }

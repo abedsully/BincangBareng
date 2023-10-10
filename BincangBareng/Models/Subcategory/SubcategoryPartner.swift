@@ -8,8 +8,8 @@
 import Foundation
 import RealmSwift
 
-class Subcategory: Object {
+class SubcategoryPartner: Object {
     @objc dynamic var title: String = ""
     
-    let items = List<Item>()
+    let items = List<ItemPartner>()
 }

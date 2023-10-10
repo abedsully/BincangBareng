@@ -10,10 +10,10 @@ import RealmSwift
 
 class PartnerItemViewController: UITableViewController {
     
-    var partnerItems: Results<Item>?
+    var partnerItems: Results<ItemPartner>?
     let realm = try! Realm()
     
-    var selectedSubcategory: Subcategory? {
+    var selectedSubcategory: SubcategoryPartner? {
         didSet {
             loadItems()
         }
@@ -80,7 +80,7 @@ class PartnerItemViewController: UITableViewController {
             if let currentSubcategory = self.selectedSubcategory {
                 do {
                     try self.realm.write {
-                        let newItem = Item()
+                        let newItem = ItemPartner()
                         newItem.name = textField.text!
                         currentSubcategory.items.append(newItem)
                     }
@@ -99,7 +99,16 @@ class PartnerItemViewController: UITableViewController {
         }
         
         present(alert, animated: true, completion: nil)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissAlertController))
+                tapGesture.cancelsTouchesInView = false
+                view.window?.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func dismissAlertController(sender: UITapGestureRecognizer) {
+           self.view.window?.removeGestureRecognizer(sender)
+           self.presentedViewController?.dismiss(animated: true, completion: nil)
+       }
     
     
     func loadItems(){

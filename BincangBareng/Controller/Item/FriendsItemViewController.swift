@@ -6,24 +6,111 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FriendsItemViewController: UITableViewController {
+    
+    let realm = try! Realm()
+    var friendsItems: Results<ItemFriends>?
+    
+    var selectedSubcategory: SubcategoryFriends? {
+        didSet {
+            loadItems()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 70.0
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friendsItems?.count ?? 1
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.friendsItemCell, for: indexPath)
+        
+        if let item = friendsItems?[indexPath.row] {
+            cell.textLabel?.text = item.name
+            
+            cell.accessoryType = item.done ? .checkmark : .none
+            
+            cell.textLabel?.numberOfLines = 0
+        }
+        
+        else {
+            cell.textLabel?.text = "No Questions Added"
+        }
 
+        return cell
+    }
+    
+    // MARK: - Table View Delegate Methods
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let item = friendsItems?[indexPath.row] {
+            do {
+                try realm.write {
+                    item.done = !item.done
+                }
+            } catch {
+                print("Error saving new questions \(error)")
+            }
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        tableView.reloadData()
+        
+    }
+    
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: Constant.alertItem, message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: Constant.alertActionItem, style: .default) { (action) in
+            if let currentSubcategory = self.selectedSubcategory {
+                do {
+                    try self.realm.write {
+                        let newItem = ItemFriends()
+                        newItem.name = textField.text!
+                        currentSubcategory.items.append(newItem)
+                    }
+                } catch {
+                    print("Error saving new question \(error)")
+                }
+            }
+            
+            self.tableView.reloadData()
+        }
+        
+        alert.addAction(action)
+        
+        alert.addTextField { (alertTextField) in
+            textField = alertTextField
+        }
+        
+        present(alert, animated: true, completion: nil)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissAlertController))
+                tapGesture.cancelsTouchesInView = false
+                view.window?.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissAlertController(sender: UITapGestureRecognizer) {
+            self.view.window?.removeGestureRecognizer(sender)
+            self.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
+    
+    func loadItems(){
+        friendsItems = selectedSubcategory?.items.sorted(byKeyPath: "name", ascending: true)
+        tableView.reloadData()
+    }
+    
 }

@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -140,19 +139,21 @@
         <!--Choose the topic-->
         <scene sceneID="o8G-LZ-uMb">
             <objects>
-                <tableViewController id="1OD-9t-8tu" customClass="ItemPartnerViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FamilySubcategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1OD-9t-8tu" customClass="FamilySubcategoryTableViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Axo-9G-530">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subcategoryFamilyCell" id="R6x-Mz-IzT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subcategoryFamilyCell" id="R6x-Mz-IzT">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6x-Mz-IzT" id="m9V-Ag-9nr">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="backgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -162,28 +163,109 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Choose the topic" id="MUv-3e-a7p">
                         <barButtonItem key="backBarButtonItem" title="Back" id="e7h-Fp-QUP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ih6-9N-8lf">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="1OD-9t-8tu" id="IPr-iB-Svp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="yUC-mc-JZp" kind="show" identifier="toFamilyItem" id="K0D-rR-P5F"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Y2-ks-7Jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3143" y="-246"/>
         </scene>
-        <!--Choose the topic-->
-        <scene sceneID="WL8-Gt-ONd">
+        <!--Questions Lists-->
+        <scene sceneID="ngk-il-jGg">
             <objects>
-                <tableViewController id="PbJ-p0-2Qt" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Fke-gC-7tG">
+                <tableViewController id="yUC-mc-JZp" customClass="FamilyItemViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BFJ-Tq-cYA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subcategoryFriendsCell" id="NuV-10-Rre">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="familyItemCell" id="lYe-X7-Sms">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NuV-10-Rre" id="wlt-dS-1iF">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYe-X7-Sms" id="T1P-Cc-9qy">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yUC-mc-JZp" id="UEy-De-sCp"/>
+                            <outlet property="delegate" destination="yUC-mc-JZp" id="bOh-0n-IQl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Questions Lists" id="Pxc-ka-W02">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="peg-P4-HQs">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="yUC-mc-JZp" id="IpR-Rs-kXg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHS-YF-gWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="-246"/>
+        </scene>
+        <!--Questions Lists-->
+        <scene sceneID="Su2-0a-Qtv">
+            <objects>
+                <tableViewController id="d7d-hM-lRY" customClass="FriendsItemViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CET-Ls-XjY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsItemCell" id="Sg7-A9-NaV">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sg7-A9-NaV" id="WfY-ub-Cpc">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d7d-hM-lRY" id="ubw-xZ-r7b"/>
+                            <outlet property="delegate" destination="d7d-hM-lRY" id="QMm-Nn-Lof"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Questions Lists" id="nwI-XS-mZZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CO1-He-dHp">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="d7d-hM-lRY" id="Y6r-VL-4WK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSD-eA-yrb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="504"/>
+        </scene>
+        <!--Choose the topic-->
+        <scene sceneID="WL8-Gt-ONd">
+            <objects>
+                <tableViewController id="PbJ-p0-2Qt" customClass="FriendsSubcategoryTableViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Fke-gC-7tG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subcategoryFriendsCell" id="NuV-10-Rre">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NuV-10-Rre" id="wlt-dS-1iF">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="backgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -191,7 +273,16 @@
                             <outlet property="delegate" destination="PbJ-p0-2Qt" id="g9E-yi-iuy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Choose the topic" id="K1p-Qs-X2H"/>
+                    <navigationItem key="navigationItem" title="Choose the topic" id="K1p-Qs-X2H">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xG7-gv-Ulf">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="PbJ-p0-2Qt" id="RPC-kd-9Fu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="d7d-hM-lRY" kind="show" identifier="toFriendsItem" id="aiR-yL-rfj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRI-5S-PEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,17 +291,17 @@
         <!--Choose the topic-->
         <scene sceneID="Z8E-fZ-RZ1">
             <objects>
-                <tableViewController id="5UX-YN-Ufh" customClass="PartnerSubcategoryTableViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PartnerSubcategoryViewController" id="5UX-YN-Ufh" customClass="PartnerSubcategoryTableViewController" customModule="BincangBareng" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3cc-wI-BJh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subcategoryPartnerCell" id="s7S-6s-8Fk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subcategoryPartnerCell" id="s7S-6s-8Fk">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s7S-6s-8Fk" id="m4C-vL-9tg">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="backgroundColor"/>
@@ -224,6 +315,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Choose the topic" id="T0L-6a-ygE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qrk-Fi-KCY">
+                            <color key="tintColor" name="textColor"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="5UX-YN-Ufh" id="fnZ-e8-V4c"/>
                             </connections>
@@ -382,6 +474,7 @@
             <point key="canvasLocation" x="1313.7404580152672" y="-246.47887323943664"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="textColor"/>
     <resources>
         <image name="familyCategory" width="540" height="374"/>
         <namedColor name="backgroundColor">
@@ -390,8 +483,5 @@
         <namedColor name="textColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
