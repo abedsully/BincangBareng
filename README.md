@@ -1,10 +1,10 @@
 # BincangBareng
 
-BincangBareng: Strengthening Bonds through Conversations by Stefanus Albert Wilson
+BincangBareng: Strengthening Bonds through Conversations by [Stefanus Albert Wilson](https://github.com/abedsully)
 
 ## What is BincangBareng?
 
-BincangBareng, your go-to app for meaningful conversations with your loved ones. BincangBareng is designed to facilitate deeper connections and foster stronger relationships by providing a curated list of engaging questions to ask your family, friends, and more. BincangBareng is also workable in both appearances: Light and Dark.
+BincangBareng, your go-to app for **meaningful conversations** with your loved ones. BincangBareng is designed to facilitate deeper connections and foster stronger relationships by providing a **curated list** of engaging questions to ask your family, friends, and more. Topics and Questions in BincangBareng are also **customizable** so that users can craft their own question lists based on specific topics and occasions with the people they're conversing with. BincangBareng is also workable in both appearances: **Light** and **Dark**.
 
 ### Pods Used
 
