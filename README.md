@@ -8,8 +8,8 @@ BincangBareng, your go-to app for meaningful conversations with your loved ones.
 
 ### Pods Used
 
-1. ![RealmSwift](https://github.com/realm/realm-swift)
-2. ![SwipeCellKit](https://github.com/SwipeCellKit/SwipeCellKit)
+1. [RealmSwift](https://github.com/realm/realm-swift)
+2. [SwipeCellKit](https://github.com/SwipeCellKit/SwipeCellKit)
 
 
 
