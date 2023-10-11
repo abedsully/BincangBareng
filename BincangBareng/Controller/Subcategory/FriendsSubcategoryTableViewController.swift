@@ -21,6 +21,8 @@ class FriendsSubcategoryTableViewController: UITableViewController {
         loadSubcategories()
     }
     
+    // MARK: - Adding Default Topics and Questions
+    
     func addTopicsFriends(){
         addDefaultSubcategory(title: "Books", fileName: "booksFriends")
         addDefaultSubcategory(title: "Events", fileName: "eventsFriends")
@@ -35,6 +37,7 @@ class FriendsSubcategoryTableViewController: UITableViewController {
     }
 
     // MARK: - Table View Data Source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subcategories?.count ?? 1
     }
@@ -80,6 +83,7 @@ class FriendsSubcategoryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    // MARK: - Adding New Topics
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
@@ -112,6 +116,7 @@ class FriendsSubcategoryTableViewController: UITableViewController {
        }
     
     // // MARK: - Default Topics and Questions
+    
     func addDefaultSubcategory(title: String, fileName: String) {
         
         if realm.objects(SubcategoryFriends.self).filter("title == %@", title).first != nil {
@@ -128,6 +133,7 @@ class FriendsSubcategoryTableViewController: UITableViewController {
                 let newItem = ItemFriends()
                 newItem.name = question
                 newItem.done = false
+                newItem.dateCreated = Date()
                 subcategory.items.append(newItem)
             }
         } else {

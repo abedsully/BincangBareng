@@ -13,6 +13,9 @@ class CategoryViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    // MARK: - Default Categories
+    
     var images: [String] =
     [
         "partnerCategory", "familyCategory", "friendsCategory"
@@ -27,8 +30,6 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
-    
     }
     
 }

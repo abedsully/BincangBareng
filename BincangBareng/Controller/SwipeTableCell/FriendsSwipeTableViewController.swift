@@ -1,31 +1,31 @@
 //
-//  PartnerSwipeTableViewController.swift
+//  FriendsSwipeTableViewController.swift
 //  BincangBareng
 //
-//  Created by Stefanus Albert Wilson on 10/10/23.
+//  Created by Stefanus Albert Wilson on 10/11/23.
 //
 
 import UIKit
 import RealmSwift
 import SwipeCellKit
 
-class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
-
+class FriendsSwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
     
-    var partnerItems: Results<ItemPartner>?
+    var friendsItems: Results<ItemFriends>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.rowHeight = 70.0
     }
+
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.partnerItemCell, for: indexPath) as! SwipeTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.friendsItemCell, for: indexPath) as! SwipeTableViewCell
         
         cell.delegate = self
-                
+        
         return cell
     }
     
@@ -38,7 +38,7 @@ class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCell
 
         updateAction.image = UIImage(named: "flag-icon")
 
-        if let item = self.partnerItems?[indexPath.row] {
+        if let item = self.friendsItems?[indexPath.row] {
             if item.done {
                 updateAction.title = "Undone"
             } else {
@@ -59,9 +59,4 @@ class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCell
         
     }
     
-    
-    
-    
-
-
 }

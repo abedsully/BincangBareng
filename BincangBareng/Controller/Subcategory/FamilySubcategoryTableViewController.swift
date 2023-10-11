@@ -23,6 +23,8 @@ class FamilySubcategoryTableViewController: UITableViewController {
         loadSubcategories()
     }
     
+    // MARK: - Adding Default Topics and Questions
+    
     func addTopicsFamily(){
         addDefaultSubcategory(title: "Childhood", fileName: "childhoodFamily")
         addDefaultSubcategory(title: "Dreams", fileName: "dreamsFamily")
@@ -33,9 +35,8 @@ class FamilySubcategoryTableViewController: UITableViewController {
         addDefaultSubcategory(title: "Travelling", fileName: "travelFamily")
     }
     
-    
-    
     // MARK: - Table View Data Source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subcategories?.count ?? 1
     }
@@ -82,6 +83,7 @@ class FamilySubcategoryTableViewController: UITableViewController {
     }
     
     // MARK: - Adding New Topics
+    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         
@@ -113,6 +115,7 @@ class FamilySubcategoryTableViewController: UITableViewController {
     }
     
     // // MARK: - Default Topics and Questions
+    
     func addDefaultSubcategory(title: String, fileName: String) {
         
         if realm.objects(SubcategoryFamily.self).filter("title == %@", title).first != nil {
@@ -129,6 +132,7 @@ class FamilySubcategoryTableViewController: UITableViewController {
                 let newItem = ItemFamily()
                 newItem.name = question
                 newItem.done = false
+                newItem.dateCreated = Date()
                 subcategory.items.append(newItem)
             }
         } else {

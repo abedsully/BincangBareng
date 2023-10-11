@@ -11,6 +11,7 @@ import RealmSwift
 class ItemFriends: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var done: Bool = false
+    @objc dynamic var dateCreated: Date?
     
     var parentCategory = LinkingObjects(fromType: SubcategoryFriends.self, property: "items")
 }

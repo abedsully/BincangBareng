@@ -25,7 +25,8 @@ class PartnerItemViewController: PartnerSwipeTableViewController {
         
     }
     
-    // MARK: - Table View Datasource Methods
+    // MARK: - Table View Datasource
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return partnerItems?.count ?? 1
     }
@@ -51,24 +52,11 @@ class PartnerItemViewController: PartnerSwipeTableViewController {
     // MARK: - Table View Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if let item = partnerItems?[indexPath.row] {
-            do {
-                try realm.write {
-                    item.done = !item.done
-                }
-            } catch {
-                print("Error saving new questions \(error)")
-            }
-        }
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        tableView.reloadData()
-        
+        tableView.deselectRow(at: indexPath, animated: true) 
     }
     
-    // MARK: - Add New Items
+    // MARK: - Adding New Questions
+    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
@@ -81,6 +69,7 @@ class PartnerItemViewController: PartnerSwipeTableViewController {
                     try self.realm.write {
                         let newItem = ItemPartner()
                         newItem.name = textField.text!
+                        newItem.dateCreated = Date()
                         currentSubcategory.items.append(newItem)
                     }
                 } catch {
@@ -109,9 +98,13 @@ class PartnerItemViewController: PartnerSwipeTableViewController {
            self.presentedViewController?.dismiss(animated: true, completion: nil)
        }
     
+    // MARK: - Data Manipulation Methods
     
     func loadItems(){
-        partnerItems = selectedSubcategory?.items.sorted(byKeyPath: "name", ascending: true)
+        partnerItems = selectedSubcategory?.items.sorted(by: [
+            SortDescriptor(keyPath: "done", ascending: true),
+            SortDescriptor(keyPath: "dateCreated", ascending: false)
+        ])
         tableView.reloadData()
     }
     
@@ -129,10 +122,6 @@ class PartnerItemViewController: PartnerSwipeTableViewController {
         }
         tableView.reloadData()
     }
-    
-    
-    
-    
 }
 
 // MARK: - Search Bar Methods

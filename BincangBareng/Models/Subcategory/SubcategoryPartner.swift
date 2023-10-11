@@ -10,6 +10,7 @@ import RealmSwift
 
 class SubcategoryPartner: Object {
     @objc dynamic var title: String = ""
+    @objc dynamic var dateCreated: Date?
     
     let items = List<ItemPartner>()
 }

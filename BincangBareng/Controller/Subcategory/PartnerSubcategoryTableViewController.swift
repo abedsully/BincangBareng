@@ -23,6 +23,8 @@ class PartnerSubcategoryTableViewController: UITableViewController {
         loadSubcategories()
     }
     
+    // MARK: - Adding Default Topics and Questions
+    
     func addTopicsPartner(){
         addDefaultSubcategory(title: "Love", fileName: "lovePartner")
         addDefaultSubcategory(title: "Work", fileName: "workPartner")
@@ -89,6 +91,7 @@ class PartnerSubcategoryTableViewController: UITableViewController {
     
     
     // MARK: - Adding New Topics
+    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
@@ -123,6 +126,7 @@ class PartnerSubcategoryTableViewController: UITableViewController {
     }
     
     // // MARK: - Default Topics and Questions
+    
     func addDefaultSubcategory(title: String, fileName: String) {
         
         if realm.objects(SubcategoryPartner.self).filter("title == %@", title).first != nil {
@@ -139,6 +143,7 @@ class PartnerSubcategoryTableViewController: UITableViewController {
                 let newItem = ItemPartner()
                 newItem.name = question
                 newItem.done = false
+                newItem.dateCreated = Date()
                 subcategory.items.append(newItem)
             }
         } else {

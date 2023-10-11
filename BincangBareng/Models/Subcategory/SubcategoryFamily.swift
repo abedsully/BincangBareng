@@ -10,6 +10,7 @@ import RealmSwift
 
 class SubcategoryFamily: Object {
     @objc dynamic var title: String = ""
+    @objc dynamic var dateCreated: Date?
     
     let items = List<ItemFamily>()
 }

@@ -8,11 +8,9 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
-
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -29,6 +27,15 @@ class OnboardingViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "hasSeenOnboarding") {
+            // User has already seen the onboarding, navigate to CategoryViewController
+            let controller = storyboard?.instantiateViewController(withIdentifier: Constant.toCategoryIdentifier) as! UINavigationController
+            controller.modalPresentationStyle = .fullScreen
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +49,9 @@ class OnboardingViewController: UIViewController {
         
     }
     
+    private func showCategory() {
+        
+    }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
@@ -50,15 +60,16 @@ class OnboardingViewController: UIViewController {
             controller.modalPresentationStyle = .fullScreen
             present(controller, animated: true, completion: nil)
             
+            UserDefaults.standard.set(true, forKey: "hasSeenOnboarding")
+            
         } else{
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             pageControl.currentPage = currentPage
         }
-
- 
     }
+    
 }
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

@@ -8,10 +8,10 @@
 import UIKit
 import RealmSwift
 
-class FriendsItemViewController: UITableViewController {
+class FriendsItemViewController: FriendsSwipeTableViewController {
     
     let realm = try! Realm()
-    var friendsItems: Results<ItemFriends>?
+
     
     var selectedSubcategory: SubcategoryFriends? {
         didSet {
@@ -25,6 +25,7 @@ class FriendsItemViewController: UITableViewController {
 
     }
     
+    // MARK: - Table View Datasource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friendsItems?.count ?? 1
@@ -33,7 +34,7 @@ class FriendsItemViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.friendsItemCell, for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = friendsItems?[indexPath.row] {
             cell.textLabel?.text = item.name
@@ -53,23 +54,10 @@ class FriendsItemViewController: UITableViewController {
     // MARK: - Table View Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if let item = friendsItems?[indexPath.row] {
-            do {
-                try realm.write {
-                    item.done = !item.done
-                }
-            } catch {
-                print("Error saving new questions \(error)")
-            }
-        }
-        
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        tableView.reloadData()
-        
     }
     
+    // MARK: - Adding New Questions
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
@@ -82,6 +70,7 @@ class FriendsItemViewController: UITableViewController {
                     try self.realm.write {
                         let newItem = ItemFriends()
                         newItem.name = textField.text!
+                        newItem.dateCreated = Date()
                         currentSubcategory.items.append(newItem)
                     }
                 } catch {
@@ -110,8 +99,29 @@ class FriendsItemViewController: UITableViewController {
             self.presentedViewController?.dismiss(animated: true, completion: nil)
         }
     
+    // MARK: - Data Manipulation Methods
+    
     func loadItems(){
-        friendsItems = selectedSubcategory?.items.sorted(byKeyPath: "name", ascending: true)
+        friendsItems = selectedSubcategory?.items.sorted(by: [
+            SortDescriptor(keyPath: "done", ascending: true),
+            SortDescriptor(keyPath: "dateCreated", ascending: false)
+        ])
+        tableView.reloadData()
+    }
+    
+    // MARK: - Update Model
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let itemsToUpdate = self.friendsItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    itemsToUpdate.done = !itemsToUpdate.done
+                }
+            } catch {
+                print("Error updating items \(error)")
+            }
+        }
+        
         tableView.reloadData()
     }
     

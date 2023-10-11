@@ -1,18 +1,17 @@
 //
-//  PartnerSwipeTableViewController.swift
+//  FamilySwipeTableViewController.swift
 //  BincangBareng
 //
-//  Created by Stefanus Albert Wilson on 10/10/23.
+//  Created by Stefanus Albert Wilson on 10/11/23.
 //
 
 import UIKit
 import RealmSwift
 import SwipeCellKit
 
-class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
-
+class FamilySwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate{
     
-    var partnerItems: Results<ItemPartner>?
+    var familyItems: Results<ItemFamily>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +20,10 @@ class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCell
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.partnerItemCell, for: indexPath) as! SwipeTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.familyItemCell, for: indexPath) as! SwipeTableViewCell
         
         cell.delegate = self
-                
+        
         return cell
     }
     
@@ -38,7 +36,7 @@ class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCell
 
         updateAction.image = UIImage(named: "flag-icon")
 
-        if let item = self.partnerItems?[indexPath.row] {
+        if let item = self.familyItems?[indexPath.row] {
             if item.done {
                 updateAction.title = "Undone"
             } else {
@@ -58,10 +56,5 @@ class PartnerSwipeTableViewController: UITableViewController, SwipeTableViewCell
     func updateModel(at indexPath: IndexPath){
         
     }
-    
-    
-    
-    
-
 
 }

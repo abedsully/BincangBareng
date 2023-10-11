@@ -17,6 +17,7 @@ struct Constant {
     static let toCategoryIdentifier = "toCategory"
     
     // MARK: - Category
+    static let categoryViewController = "CategoryViewController"
     static let categoryCell = "categoryCell"
     static let toPartnerSubcategory = "toPartnerSubcategory"
     static let toFamilySubcategory = "toFamilySubcategory"
