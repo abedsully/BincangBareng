@@ -31,6 +31,8 @@ class FriendsItemViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.friendsItemCell, for: indexPath)
         
         if let item = friendsItems?[indexPath.row] {
@@ -113,4 +115,31 @@ class FriendsItemViewController: UITableViewController {
         tableView.reloadData()
     }
     
+}
+
+// MARK: - Search Bar Methods
+
+extension FriendsItemViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        friendsItems = friendsItems?.filter("name CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "done", ascending: true)
+
+        tableView.reloadData()
+    }
+
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchBar.text?.count == 0){
+            loadItems()
+
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+        
+        else{
+            searchBarSearchButtonClicked(searchBar)
+        }
+    }
 }

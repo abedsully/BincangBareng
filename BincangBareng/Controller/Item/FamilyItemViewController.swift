@@ -114,3 +114,30 @@ class FamilyItemViewController: UITableViewController {
     }
     
 }
+
+// MARK: - Search Bar Methods
+
+extension FamilyItemViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        familyItems = familyItems?.filter("name CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "done", ascending: true)
+
+        tableView.reloadData()
+    }
+
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchBar.text?.count == 0){
+            loadItems()
+
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+        
+        else{
+            searchBarSearchButtonClicked(searchBar)
+        }
+    }
+}

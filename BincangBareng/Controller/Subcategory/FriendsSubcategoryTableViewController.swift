@@ -24,7 +24,7 @@ class FriendsSubcategoryTableViewController: UITableViewController {
     func addTopicsFriends(){
         addDefaultSubcategory(title: "Books", fileName: "booksFriends")
         addDefaultSubcategory(title: "Events", fileName: "eventsFriends")
-        addDefaultSubcategory(title: "Foods", fileName: "foodsFriends")
+        addDefaultSubcategory(title: "Foods", fileName: "foodFriends")
         addDefaultSubcategory(title: "Funny Stories", fileName: "funnyStoriesFriends")
         addDefaultSubcategory(title: "Growth", fileName: "growthFriends")
         addDefaultSubcategory(title: "Hobbies", fileName: "hobbiesFriends")

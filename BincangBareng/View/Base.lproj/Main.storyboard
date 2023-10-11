@@ -185,9 +185,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Questions" id="hb8-q8-mfD">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" name="backgroundColor"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="yUC-mc-JZp" id="sBL-bm-1lc"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="familyItemCell" id="lYe-X7-Sms">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYe-X7-Sms" id="T1P-Cc-9qy">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -221,9 +230,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Questions" id="7j1-wi-Dwt">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" name="backgroundColor"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="d7d-hM-lRY" id="noG-5s-odv"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsItemCell" id="Sg7-A9-NaV">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sg7-A9-NaV" id="WfY-ub-Cpc">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -338,9 +356,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Questions" id="3d4-fw-MBF">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                            <color key="barTintColor" name="backgroundColor"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="PQP-YG-g2J" id="Lyh-A6-9l6"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="partnerItemCell" id="rOY-mf-PYd">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="partnerItemCell" id="rOY-mf-PYd" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="94" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rOY-mf-PYd" id="eBT-Vv-D4G">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>

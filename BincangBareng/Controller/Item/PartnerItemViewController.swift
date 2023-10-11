@@ -8,9 +8,9 @@
 import UIKit
 import RealmSwift
 
-class PartnerItemViewController: UITableViewController {
+class PartnerItemViewController: PartnerSwipeTableViewController {
     
-    var partnerItems: Results<ItemPartner>?
+
     let realm = try! Realm()
     
     var selectedSubcategory: SubcategoryPartner? {
@@ -22,7 +22,6 @@ class PartnerItemViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 70.0
         
     }
     
@@ -32,7 +31,7 @@ class PartnerItemViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.partnerItemCell, for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = partnerItems?[indexPath.row] {
             cell.textLabel?.text = item.name
@@ -114,6 +113,52 @@ class PartnerItemViewController: UITableViewController {
     func loadItems(){
         partnerItems = selectedSubcategory?.items.sorted(byKeyPath: "name", ascending: true)
         tableView.reloadData()
+    }
+    
+    // MARK: - Update Model
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let itemsToUpdate = self.partnerItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    itemsToUpdate.done = !itemsToUpdate.done // Toggle the 'done' property
+                }
+            } catch {
+                print("Error updating items \(error)")
+            }
+        }
+        tableView.reloadData()
+    }
+    
+    
+    
+    
+}
+
+// MARK: - Search Bar Methods
+
+extension PartnerItemViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        partnerItems = partnerItems?.filter("name CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "done", ascending: true)
+
+        tableView.reloadData()
+    }
+
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchBar.text?.count == 0){
+            loadItems()
+
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+        
+        else{
+            searchBarSearchButtonClicked(searchBar)
+        }
     }
 }
 
