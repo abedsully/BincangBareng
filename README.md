@@ -6,6 +6,17 @@ BincangBareng: Strengthening Bonds through Conversations by [Stefanus Albert Wil
 
 BincangBareng, your go-to app for **meaningful conversations** with your loved ones. BincangBareng is designed to facilitate deeper connections and foster stronger relationships by providing a **curated list** of engaging questions to ask your family, friends, and more. Topics and Questions in BincangBareng are also **customizable** so that users can craft their own question lists based on specific topics and occasions with the people they're conversing with. BincangBareng is also workable in both appearances: **Light** and **Dark**.
 
+## Getting Started
+1. Make sure you have the Xcode version 14.0 or above installed on your computer.
+2. Tap in clone an existing project and paste the link https://github.com/abedsully/BincangBareng.git
+3. Go to command line (terminal) and initialize Podfile.
+4. Make sure to change the supported version to atleast be 13.0, then add 2 pods (RealmSwift & SwipeCellKit).
+5. Run pod install so you can install the dependencies in your project.
+6. Open the project files in Xcode (BincangBareng.xcworkspace).
+7. Click link [here](https://drive.google.com/uc?id=1J15xPuthGbnmAwJhM1ZKtHGE6QO_7ToA&export=download) and paste the folders inside (Partner Category, Family Category, and Partner Category) into Supporting Files folder.
+8. Review the code and make sure you understand what it does.
+9. Run the active scheme.
+
 ### Pods Used
 
 1. [RealmSwift](https://github.com/realm/realm-swift)
