@@ -40,10 +40,11 @@ Subcategory (Topics) Pages:
 
 Item (Questions) Pages:
 
-
-<img width="250" alt="Search Questions" src="https://github.com/abedsully/BincangBareng/assets/113880556/67c1d154-3c51-4a31-ba1c-05a0a37ed414">
+<img width="250" alt="Adding New Questions" src="https://github.com/abedsully/BincangBareng/assets/113880556/8c0a585b-a814-4bcf-a47b-f9eafe9b6b9b">
 <img width="250" alt="Swipe Item" src="https://github.com/abedsully/BincangBareng/assets/113880556/b768891d-8bc9-4b10-ba54-301527ee3d10">
 <img width="250" alt="Checked Item" src="https://github.com/abedsully/BincangBareng/assets/113880556/e75e093c-fac0-465b-a57d-11724ddc04d4">
+<img width="250" alt="Search Questions" src="https://github.com/abedsully/BincangBareng/assets/113880556/67c1d154-3c51-4a31-ba1c-05a0a37ed414">
+
 
 
 
