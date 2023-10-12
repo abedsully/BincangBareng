@@ -36,7 +36,7 @@ Category Pages:
 
 Subcategory (Topics) Pages:
 
-<img width="250" alt="Topics" src="https://github.com/abedsully/BincangBareng/assets/113880556/7d647e60-846e-42e4-8579-a63d26f32e15">
+<img width="250" alt="Topics" src="https://github.com/abedsully/BincangBareng/assets/113880556/bc61d372-d02d-4976-a41a-bd3c21641189">
 
 Item (Questions) Pages:
 
